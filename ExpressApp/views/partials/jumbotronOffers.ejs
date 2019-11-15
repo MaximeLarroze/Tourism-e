@@ -1,0 +1,28 @@
+<%  for(var i=0; i < data.length; i++) { %>
+    <div class="jumbotron">
+        <h3>
+            <%= data[i].rdfs_label[0].value %>
+        </h3>
+        <p class="lead">
+            <% for(var j=0; j < data[i].rdf_type.length; j++) { %>
+                <% if(data[i].rdf_type[j].split('#')[1] != null) { %>
+                    <%= data[i].rdf_type[j].split('#')[1] %>
+                        <% if(j != data[i].rdf_type.length - 1) { %>
+                            -
+                            <% }%>
+                                <% } %>
+                                    <% } %>
+        </p>
+        <hr class="my-4">
+        <p>
+            <% if(data[i].hasDescription.length != 0){%>
+                <%= data[i].hasDescription[0].shortDescription[0].value %>
+                    <%} else { %>
+                        Aucune description disponible
+                        <%}%>
+        </p>
+        <hr class="my-4">
+
+        <button class="btn btn-success" style="width: 100%;" onclick="location.href = '../detail/<%= data[i].dc_identifier[0]%>';">More info</button>
+    </div>
+    <% } %>

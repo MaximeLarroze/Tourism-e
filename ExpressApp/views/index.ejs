@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>
+        <title>
+            <%= title %> - Tourism-e</title>
+</head>
+
+<body class="bodyCustom">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-custom-dark">
+            <% include partials/nav %>
+        </nav>
+    </header>
+</body>
+
+<main role="main" class="container">
+    <div class="jumbotron text-center">
+        <img src="assets/img/logo-black.png">
+        <p class="lead"> Traveling is the only thing we buy that makes us richer !</p>
+        <hr class="my-4">
+    </div>
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner rounded">
+            <div class="carousel-item active imgHome">
+                <img src="assets/img/tour_eiffel.jpeg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item imgHome">
+                <img src="assets/img/toureiffel.jpg" class="d-block w-100" alt="">
+            </div>
+            <div class="carousel-item imgHome">
+                <img src="assets/img/toureiffel.jpg" class="d-block w-100" alt="">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="jumbotron text-center mt-4">
+        <p class="lead"> Tourism-e est une révolution pour le tourisme, il vous permettra de touver toutes les activitées que vous cherchiez pour les vacances ! Vous permettant ainsi de trouver la destination parfaite ! Tourism-e est la nouvelle façon de faire du tourisme
+        </p>
+        <hr class="my-4">
+    </div>
+</main>
+<footer class="footer">
+    <% include partials/footer %>
+</footer>
+
+<% include partials/default-scripts %>
+
+</html>

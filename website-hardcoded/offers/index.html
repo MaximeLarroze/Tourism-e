@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Offers page of Tourism-e website.">
+    <meta name="author" content="Valentin Virot, Kim Dole, Raphaël Delcroix, Maxime Larroze-Francezat">
+
+    <title>Offers - Tourism-e</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bodyCustom">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-custom-dark">
+            <a class="navbar-brand" href="#"><img id="navbar-logo" src="../assets/img/logo-white.png" alt="Go to Tourism-e home page."></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../map/">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../offers/">Offers</a>
+                    </li>
+                    <!-- temp -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../offers/details.html">Offer details (temp)</a>
+                    </li>
+                    <!-- temp -->
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search an offer" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+
+    <main role="main" class="container">
+        <div class="jumbotron text-center">
+            <h1>Offers - Tourism-e</h1>
+            <p class="lead">Select what you want by checking our different options, then, data will be sorted!</p>
+            <hr class="my-4">
+            <form>
+                <div class="form-group">
+                    <label for="keywords" id="custom-label">Keywords</label>
+                    <input type="text" class="form-control" id="keywords" aria-describedby="keywordsHelp" placeholder="Enter keywords">
+                    <small id="keywordsHelp" class="form-text text-muted">You can type in a city name, center of
+                        interest...</small>
+                    <br>
+                    <label for="category" id="custom-label">Category</label>
+                    <select name="category" id="category" class="custom-select">
+                        <option value="all">All categories</option>
+                        <option value="city">City</option>
+                        <option value="cinema">Cinema</option>
+                        <option value="museum">Museum</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-success">Search!</button>
+                <button class="btn btn-primary">Show additional filters</button>
+            </form>
+        </div>
+
+        <div class="jumbotron">
+            <h3>JARDIN BOTANIQUE JEAN MARIE PELT</h3>
+            <p class="lead">Site culturel - Point of interest</p>
+            <hr class="my-4">
+            <p>
+                Avec plus de 12 000 espèces en culture, le Jardin Botanique du Montet est un véritable musée des plantes qui témoigne de l’extraordinaire richesse du monde végétal. Initié à partir de 1975 au sud-ouest de l’agglomération nancéienne, il est devenu un des
+                plus importants équipements botaniques français. Au cœur du parc vallonné de 35 hectares, les différentes collections proposent de nombreux thèmes de découverte et d’émerveillement, des plantes communes de nos jardins aux espèces originaires
+                des contrées les plus lointaines (alpinum, arboretum, roseraie, plantes médicinales, collections historique et systématique ...). Dans les serres tropicales de 2 500 m², la végétation exubérante offre un dépaysement permanent. Une simple
+                visite se transforme vite en un véritable parcours d’explorateur. Nouveauté 2019, une nouvelle application de visite permet de découvrir le Jardin Botanique de façon ludique et innovante en associant jeux, vidéos, et réalité augmentée
+                autour de 4 parcours (adultes et enfants). Elle est téléchargeable gratuitement sur votre smartphone ou disponible sur des tablettes en location à l’accueil du jardin. Plusieurs collections spécialisées (Aracées, Orchidacées, plantes succulentes,
+                insectivores et myrmécophiles, Broméliacées...) sont reconnues pour leur importance et leur richesse par la communauté scientifique internationale. Jardin accessible gratuitement - accès aux serres tropicales payantes
+            </p>
+            <hr class="my-4">
+            <form class="text-center">
+                <button class="btn btn-info" style="width: 100%">More info</button>
+            </form>
+        </div>
+
+        <div class="jumbotron">
+            <h3>ÉGLISE DE SAINT JEAN D ORMONT</h3>
+            <p class="lead">Site culturel - Point of interest - Religious site</p>
+            <hr class="my-4">
+            <p>
+                Petite église du 18ème siècle située sur un promontoire. Caractéristique : son clocher à bulbe du XVIIIème. Elle est entourée d'un cimetière civil et militaire.
+            </p>
+            <hr class="my-4">
+            <form class="text-center">
+                <button class="btn btn-info" style="width: 100%">More info</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted"><img id="navbar-logo" src="../assets/img/logo-white.png"
+                    alt="Go to Tourism-e home page."> , a #Diiage2022 project. Created by Team 3 in Diiage.</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

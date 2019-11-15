@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <% include partials/head %>
+    <title>Touris'map</title>
+    <% include partials/leaflet %>
+</head>
+
+<body>
+    <div class="container-fluid p-0 m-0 minHeight-100 d-flex flex-column">
+        <header class="row p-0 m-0">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-custom-dark" id="">
+                <% include partials/nav %>
+                <ul class="navbar-nav">
+                    <li class="nav-item" id="quickSearchLi">
+                    </li>
+                    <li class="nav-item">
+                        <button id="searchDysplayButton"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M2 15.5v2h20v-2H2zm0-5v2h20v-2H2zm0-5v2h20v-2H2z" />
+                                <path d="M0 0h24v24H0z" fill="none" /></svg></span></button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="searchDiv">
+            <form action="GET">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <table class="table table-borderless">
+                                <tr>
+                                    <th>
+                                        <!-- <input type="checkbox" name="Lieu" id="Lieu"> -->
+                                        <label for="Lieu">Lieu </label>
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
+                                            height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                                            xml:space="preserve">
+                                            <g id="Bounding_Box">
+                                                <rect fill="none" width="24" height="24" />
+                                            </g>
+                                            <g id="Master">
+                                                <path
+                                                    d="M22,11V9L12,2L2,9v2h2v9H2v2h20v-2h-2v-9H22z M16,18h-2v-4l-2,3l-2-3v4H8v-7h2l2,3l2-3h2V18z" />
+                                            </g>
+                                        </svg>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="" class="Lieu">
+                                        <label for="">Restauration</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="" class="Lieu">
+                                        <label for="">Site culturel</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="" class="Lieu">
+                                        <label for="">Site naturel</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="" class="Lieu">
+                                        <label for="">Site sportif</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                        <label for="">Tous</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col">
+                            <table class="table table-borderless">
+                                <tr>
+                                    <th>
+                                        <!-- <input type="checkbox" name="fete" id="fete"> -->
+                                        <label for="musee">Fête et manifastation </label>
+                                        <?xml version="1.0" encoding="utf-8"?>
+                                        <!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px"
+                                            height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24"
+                                            xml:space="preserve">
+                                            <g id="Bounding_Box">
+                                                <rect fill="none" width="24" height="24" />
+                                            </g>
+                                            <g id="Flat">
+                                                <g id="ui_x5F_spec_x5F_header_copy_2">
+                                                </g>
+                                                <g>
+                                                    <circle cx="12" cy="4" r="2" />
+                                                    <path d="M15.89,8.11C15.5,7.72,14.83,7,13.53,7c-0.21,0-1.42,0-2.54,0C8.24,6.99,6,4.75,6,2H4c0,3.16,2.11,5.84,5,6.71V22h2v-6h2
+			v6h2V10.05L18.95,14l1.41-1.41L15.89,8.11z" />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                        <label for="">Evenement culturel</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                        <label for="">Evenement commercial</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                        <label for="">Evenement sports et loisirs</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                        <label for="">Evenement social</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                        <label for="">Tous</label>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div class="list-group list-group-flush">
+                        <div class="col">
+                            <table class="table table-borderless">
+                                <tr>
+                                    <th>
+                                        <!-- <input type="checkbox" name="iti" id="iti"> -->
+                                        <label for="musee">Itinéraire touristique </label>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path fill="none" d="M0 0h24v24H0V0z" />
+                                            <path
+                                                d="M12 7.27l4.28 10.43-3.47-1.53-.81-.36-.81.36-3.47 1.53L12 7.27M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z" />
+                                        </svg>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                        <label for="">Pédestre</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                        <label for="">Cyclable</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                        <label for="">Routier</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                        <label for="">Fluvial ou maritime</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                        <label for="">Tous</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="range" min="1" max="200" value="100" id="slider" class="slider">
+                        <p id="pResult">Distance max : <span id="valueSlider"></span> Kilomètres</p>
+                        <div class="form-inline" id="searchSearchDiv">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                                id="searchSearch">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                                id="searchSearchButton">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="container" class="row flex-grow-1 p-0 m-0">
+            <div id="mapid"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+<style>
+
+</style>
+
+<% include partials/default-scripts %>
+
+<script>
+    var mymap = L.map('mapid').setView([46.619, 2.549], 7);
+
+    L.tileLayer(
+        'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+            maxZoom: 18,
+            attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+                '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+                'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>, #Diiage2022\'s project - Team 3',
+            id: 'mapbox.streets'
+        }).addTo(mymap);
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showUserPosition);
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
+
+    function showUserPosition(position) {
+        L.marker([position.coords.latitude, position.coords.longitude]).addTo(mymap);
+
+        var dataString = JSON.stringify({
+            query: '{ poi(size: 1000, filters: [{isLocatedAt: {schema_geo: {_geo_distance: {lng: "' + position.coords.longitude + '", lat: "' + position.coords.latitude + '", distance: "100"}}}}]) { total results { dc_identifier rdfs_label { value } isLocatedAt { schema_address { schema_streetAddress schema_postalCode schema_addressLocality } schema_geo { schema_latitude schema_longitude } } } }}'
+        });
+
+        console.log(dataString);
+        
+        $.ajax({
+            url: 'http://vps.cours-diiage.com:8080/',
+            type: 'POST',
+            contentType: 'application/json',
+            data: dataString, 
+            success: function(jdata){
+                console.log("Data received: " + jdata.data.poi.total);
+                for(var i = 0; i < jdata.data.poi.results.length; i++) {
+                    L.marker([jdata.data.poi.results[i].isLocatedAt[0].schema_geo[0].schema_latitude[0], jdata.data.poi.results[i].isLocatedAt[0].schema_geo[0].schema_longitude[0]]).addTo(mymap).bindPopup('<b>' + jdata.data.poi.results[i].rdfs_label[0].value + '</b><br>' + jdata.data.poi.results[i].isLocatedAt[0].schema_address[0].schema_postalCode[0] + ' - <a href=\"../detail/' + jdata.data.poi.results[i].dc_identifier + '\" target="_blank">See offer details</a>').openPopup();
+                }
+
+                mymap.setView([position.coords.latitude, position.coords.longitude], 13);
+            },
+            error: function(){
+                alert('error');
+            }
+        });
+    }
+
+    var slider = document.getElementById("slider");
+    var output = document.getElementById("valueSlider");
+    output.innerHTML = slider.value;
+
+    slider.oninput = function () {
+        output.innerHTML = this.value;
+    }
+
+    $(function () {
+        $("#searchDiv").hide();
+        $("#searchDysplayButton").click(function () {
+            if ($("#searchDiv").is(":visible")) {
+                $("#searchDiv").hide();
+            } else {
+                $("#searchDiv").show();
+            }
+        })
+        $("#Lieu").click(function () {
+            if ($(this).is(":checked")) {
+                $(".Lieu").prop("checked", true);
+                console.log("check");
+            } else {
+                $(".Lieu").prop("checked", false);
+                console.log("pas check");
+            }
+        })
+    });
+</script>

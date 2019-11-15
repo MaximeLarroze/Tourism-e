@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>Tourism-e</title>
+</head>
+
+<body class="bodyCustom">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-custom-dark">
+            <a class="navbar-brand" href="#"><img id="navbar-logo" src="../assets/img/logo-white.png"
+                    alt="Go to Tourism-e home page."></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../map/">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../offers/">Offers</a>
+                    </li>
+                    <!-- temp -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../offers/details.html">Offer details (temp)</a>
+                    </li>
+                    <!-- temp -->
+                </ul>
+                <form class="form-inline mt-2 mt-md-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search an offer" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <div class="container jumbotron">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>JARDIN BOTANIQUE JEAN MARIE PELT</h3>
+                    <p class="lead">Site culturel - Point of interest</p>
+                    <hr />
+                </div>
+                <div class="col-lg-8">
+                    <article> Avec plus de 12 000 espèces en culture, le Jardin Botanique du Montet est un véritable
+                        musée des plantes qui témoigne de l’extraordinaire richesse du monde végétal. Initié à partir de
+                        1975 au sud-ouest de l’agglomération nancéienne, il est devenu un des
+                        plus importants équipements botaniques français. Au cœur du parc vallonné de 35 hectares, les
+                        différentes collections proposent de nombreux thèmes de découverte et d’émerveillement, des
+                        plantes communes de nos jardins aux espèces originaires
+                        des contrées les plus lointaines (alpinum, arboretum, roseraie, plantes médicinales, collections
+                        historique et systématique ...). Dans les serres tropicales de 2 500 m², la végétation
+                        exubérante offre un dépaysement permanent. Une simple
+                        visite se transforme vite en un véritable parcours d’explorateur. Nouveauté 2019, une nouvelle
+                        application de visite permet de découvrir le Jardin Botanique de façon ludique et innovante en
+                        associant jeux, vidéos, et réalité augmentée
+                        autour de 4 parcours (adultes et enfants). Elle est téléchargeable gratuitement sur votre
+                        smartphone ou disponible sur des tablettes en location à l’accueil du jardin. Plusieurs
+                        collections spécialisées (Aracées, Orchidacées, plantes succulentes,
+                        insectivores et myrmécophiles, Broméliacées...) sont reconnues pour leur importance et leur
+                        richesse par la communauté scientifique internationale. Jardin accessible gratuitement - accès
+                        aux serres tropicales payantes</article>
+                </div>
+                <div class="col-lg-4 text-left">
+                    <img width="100%"
+                        src="https://cdn.laetis.fr/i/anjou/detail-diapo/https://cdt49.media.tourinsoft.eu/upload/village-tonneaux-tirpoil-bonnezeaux-montilliers-49-444384.jpg"
+                        alt="">
+                </div>
+                <div class="col-lg-12">
+                    <hr />
+                </div>
+                <div class="col-lg-8 pl-0">
+                    <div class="col-lg-12 mb-5">
+                        <div class=" col-lg-12 pl-0">
+                            <h3 class='d-flex align-items-center'>
+                                <i class='fas fa-info-circle'></i>
+                                <a class="flex-grow-1 d-flex justify-content-between nav-link nameclick"
+                                    data-toggle="collapse" data-toggle="collapse" aria-expanded="false"
+                                    href=".Informations">
+                                    <span class="text-center ">Informations</span>
+                                    <i class='far fa-arrow-alt-circle-right'></i>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="row">
+                            <div id="Informations" class="Informations collapse col-lg-8">
+                                <table class="text-center">
+                                    <tbody>
+                                        <tr>
+                                            <th><i class='fas fa-globe-europe'></i> NAME</th>
+                                            <td><br /></td>
+                                            <td>PARC DU TONNEAU</td>
+                                        </tr>
+                                        <tr>
+                                            <th><i class='far fa-calendar-check'></i> UPDATE</th>
+                                            <td><br /></td>
+                                            <td>2019-01-11 </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <hr />
+                                            </td>
+                                            <td>
+                                                <hr />
+                                            </td>
+                                            <td>
+                                                <hr />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><i class='fas fa-user-clock'></i> Publish by</th>
+                                            <td><br /></td>
+                                            <td>George Xaxxexz</td>
+                                        </tr>
+                                        <tr>
+                                            <th><i class='fas fa-blind'></i> Reduced mobility</th>
+                                            <td><br /></td>
+                                            <td>Yes</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="Informations collapse col-lg-4">
+                                <tabel>
+                                    <tbody>
+                                        <tr>
+                                            <th><i class='fas fa-phone'></i> Contact</th>
+                                            <td><br /></td>
+                                            <td><a href="tel:+33383518000">(+33) 3 83 51 80 00</a></td>
+                                        </tr>
+                                    </tbody>
+                                </tabel>
+                            </div>
+                        </div>
+
+                        <hr />
+
+
+                        <div class=" col-lg-12 pl-0">
+                            <h3 class='d-flex align-items-center'>
+                                <i class='fas fa-sort-alpha-down'></i>
+                                <a class="flex-grow-1 d-flex justify-content-between nav-link nameclick"
+                                    data-toggle="collapse" aria-expanded="false" href=".Classification">
+                                    <span class="text-center ">Classification</span>
+                                    <i class='far fa-arrow-alt-circle-right'></i>
+                                </a>
+                            </h3>
+                        </div>
+
+                        <div class="row">
+                            <div id="Classification" class="Classification collapse col-lg-8">
+                                <table class="text-center">
+                                    <tbody>
+                                        <tr>
+                                            <th><i class='fas fa-sort-amount-down'></i> Classified by</th>
+                                            <td>CulturalSite</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <hr />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
+                                            <td>PlaceOfInterest</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <hr />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
+                                            <td>PointOfInterest</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <hr />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
+                                            <td>ParkAndGarden</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <hr />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th></th>
+                                            <td>Park</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-lg-4 Classification collapse">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>Condition de vente</th>
+                                            <td>A la journée, Par personne, Tarifs</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <hr />
+
+
+                        <div class=" col-lg-12 pl-0">
+                            <h3 class='d-flex align-items-center'>
+                                <i class='fa fa-search-plus'></i>
+                                <a class="flex-grow-1 d-flex justify-content-between nav-link nameclick"
+                                    data-toggle="collapse" aria-expanded="false" href=".Geocaching">
+                                    <span class="text-center ">Geocaching</span>
+                                    <i class='far fa-arrow-alt-circle-right'></i>
+                                </a>
+                            </h3>
+                        </div>
+
+
+                        <div id="Geocaching" class="Geocaching collapse">
+                            <div class="row">
+                                <div class="col-lg-6 mb-5">
+                                    <table class="text-center">
+                                        <tbody>
+                                            <tr>
+                                                <th><i class='fas fa-crosshairs'></i> Address</th>
+                                                <td>Rue du tonneau</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <hr />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><i class='far fa-map'></i> Postal Code</th>
+                                                <td>54500</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <hr />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><i class='fas fa-home'></i> City</th>
+                                                <td>Vandœuvre-lès-Nancy</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="idmap" style="width: 100%; height: 100%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class=" col-lg-12 pl-0">
+                                <h3 class='d-flex align-items-center'>
+                                    <i class='fas fa-image'></i>
+                                    <a class="flex-grow-1 d-flex justify-content-between nav-link nameclick"
+                                        data-toggle="collapse" aria-expanded="false" href=".Picture">
+                                        <span class="text-center ">Picture</span>
+                                        <i class='far fa-arrow-alt-circle-right'></i>
+                                    </a>
+                                </h3>        
+                        </div>
+                        <div id="Picture" class='Picture collapse'>
+                            <div class='row'>
+                                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+                                            <div class="carousel-inner rounded">
+                                                <div class="carousel-item active">
+                                                    <img src="../assets/img/tour_eiffel.jpeg" class="d-block w-100" alt="">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="../assets/img/toureiffel.jpg" class="d-block w-100" alt="">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="../assets/img/toureiffel.jpg" class="d-block w-100" alt="">
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer to show the end bar with Copyright mention -->
+    <footer class="footer">
+        <div class="container">
+            <span class="text-muted"><img id="navbar-logo" src="assets/img/logo-white.png"
+                    alt="Go to Tourism-e home page."> , a #Diiage2022 project. Created by Team 3 in Diiage.</span>
+        </div>
+    </footer>
+</body>
+<!-- All CDN Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<!-- Script to show the map with leaflet -->
+<script>
+    var mymap = L.map('idmap').setView([51.505, -0.09], 13);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+    }).addTo(mymap);
+</script>
+<script>
+    $(document).ready(function () {
+        $("#imgbase").collapse('show');
+        $(".nameclick").click(function () {
+            $("#imgbase").collapse('toggle');
+        });
+    });
+</script>
+
+</html>

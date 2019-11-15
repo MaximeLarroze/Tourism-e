@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>
+    <title><%= title %> - Tourism-e</title>
+</head>
+
+<body class="bodyCustom">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-custom-dark">
+            <% include partials/nav %>
+        </nav>
+    </header>
+</body>
+
+<main role="main" class="container">
+    <div class="jumbotron text-center">
+        <h1><%= title %> - Tourism-e</h1>
+        <hr class="my-4">
+        <p>Oopsi! It's seems like the credentials that you've had typed in are wrong, please try again!</p>
+        <hr class="my-4">
+        <button class="btn btn-success" onclick="location.href = '/admin';">Redirect to login</button>
+    </div>
+</main>
+<footer class="footer">
+    <% include partials/footer %>
+</footer>
+
+<% include partials/default-scripts %>
+
+</html>

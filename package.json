@@ -1,0 +1,21 @@
+{
+  "name": "tourism-e",
+  "version": "1.0.0",
+  "description": "3rd projet of #Diiage2022, made by Kim Dole's Team",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://Tourism-e@dev.azure.com/Tourism-e/Tourism-e/_git/Tourism-e"
+  },
+  "author": "Kim Dole, Valentin Virot, Raphaël Delcroix, Maxime Larroze-Francezat",
+  "license": "ISC",
+  "dependencies": {
+    "express-generator": "^4.16.1",
+    "gulp": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "sass": "^1.23.3"
+  }
+}

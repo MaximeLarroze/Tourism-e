@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include partials/head %>
+        <title>
+            <%= title %> - Tourism-e</title>
+</head>
+
+<body class="bodyCustom">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-custom-dark">
+            <% include partials/nav %>
+        </nav>
+    </header>
+
+
+    <main role="main" class="container" id="mainDiv">
+        <div class="jumbotron text-center">
+            <h1>Offers - Tourism-e</h1>
+            <p class="lead">Select what you want by checking our different options, then, data will be sorted!</p>
+            <hr class="my-4">
+            <form action="GET" action="../offers/">
+                <div class="form-group">
+                    <label for="keywords" id="custom-label">Keywords</label>
+                    <input type="text" class="form-control" id="keywords" aria-describedby="keywordsHelp" placeholder="Enter keywords">
+                    <small id="keywordsHelp" class="form-text text-muted">You can type in a city name, center of
+                        interest...</small>
+                    <br>
+                    <label for="category" id="custom-label">Category</label>
+                    <select name="category" id="category" class="custom-select" id="selectCat">
+                            <% for(var i=0; i < types.length; i++) { %>
+                            <option value="<%= types[i]%>"><%= types[i]%></option>   
+                            <% } %>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success" id="SearchBt">Search!</button>
+        </div>
+        </form>
+        <div id="listeJumbo">
+            <% include partials/jumbotronOffers%>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <% include partials/footer %>
+    </footer>
+
+    <% include partials/default-scripts %>
+</body>
+
+</html>
