@@ -4,6 +4,13 @@
 <head>
     <% include partials/head %>
     <title><%= title %> - Tourism-e</title>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>.
+    <script>
+        tinymce.init({
+          selector: '#mytextarea',
+          min_height: 500
+        });
+    </script>
 </head>
 
 <body class="bodyCustom">
@@ -18,11 +25,13 @@
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="jumbotron text-center">
             <h1>Editing test - Tourism-e</h1>
-            <p class="lead">Let's try to edit something with CKEditor 5</p>
+            <p class="lead">Let's try to edit something with TinyMCE</p>
             <hr class="my-4">
-            <div id="editor">
-                <%- data.content %>
-            </div>
+            <form method="post" action="../savepage">
+                <textarea id="mytextarea" name="mytextarea"><%- data.content %></textarea>
+                <input type="hidden" value="1" name="pageId">
+                <button type="submit" class="btn btn-success">Save modifications</button>
+            </form>
         </div>
 </main>
 <footer class="footer">
@@ -30,27 +39,5 @@
 </footer>
 
 <% include partials/default-scripts %>
-<script src="https://cdn.ckeditor.com/ckeditor5/15.0.0/classic/ckeditor.js"></script>
-
-<script>
-    var data = '<%- data.content %>';
-
-    console.log(data)
-    
-    ClassicEditor
-    .create( document.querySelector( '#editor' ), {
-        toolbar: [ 'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote' ],
-        heading: {
-            options: [
-                { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
-                { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
-                { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
-            ]
-        }
-    } )
-    .catch( error => {
-        console.log( error );
-    } );
-</script>
 
 </html>

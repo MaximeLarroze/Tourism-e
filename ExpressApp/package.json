@@ -6,15 +6,18 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^15.0.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
     "express": "^4.16.4",
     "express-session": "^1.17.0",
     "http-errors": "~1.6.3",
+    "install": "^0.13.0",
     "morgan": "~1.9.1",
     "mysql": "^2.17.1",
     "node-fetch": "^2.6.0",
-    "nodemon": "^1.19.4"
+    "nodemon": "^1.19.4",
+    "npm": "^6.13.0"
   }
 }

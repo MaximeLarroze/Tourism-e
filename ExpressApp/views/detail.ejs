@@ -38,10 +38,13 @@
                 <div class="col-lg-8">
                     <article>
                         <% if(data.hasDescription.length != 0){%>
-                            <%= data.hasDescription[0].shortDescription[0].value %>
-                                <%} else { %>
-                                    Aucune description disponible
-                                    <%}%>
+                            <% if(data.hasDescription[0].shortDescription.length != 0) {%>
+                                <%= data.hasDescription[0].shortDescription[0].value %>
+                                    <%} else { %>
+                                        Aucune description disponible
+                                        <%}} else {%>
+                                            Aucune description disponible
+                                            <%}%>
                     </article>
                 </div>
                 <div class="col-lg-4 text-left">
@@ -114,13 +117,15 @@
                                         </tr>
                                         <tr>
                                             <th><i class='fas fa-blind'></i> Reduced mobility</th>
-                                            <td><br /></td>
                                             <td>
-                                                <%if(data.reducedMobilityAccess[0] != null){%>
-                                                    Yes
-                                                    <%} else {%>
-                                                        No
-                                                        <%}%>
+                                                <%if(data.reducedMobilityAccess != null){%>
+                                                    <%if(data.reducedMobilityAccess[0] != null){%>
+                                                        Yes
+                                                        <%} else {%>
+                                                            No
+                                                            <%}} else {%>
+                                                                Pas d'info dispo
+                                                                <%}%>
                                             </td>
                                         </tr>
                                     </tbody>

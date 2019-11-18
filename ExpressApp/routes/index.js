@@ -6,16 +6,28 @@ var fetch = require('node-fetch');
 var mysql = require('mysql');
 var connection = mysql.createConnection({
     host: 'localhost',
-    user: 'web4',
-    password: 'D2019',
-    database: 'web4'
+    user: 'root',
+    password: '',
+    database: 'tourisme'
 });
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', {
-        title: 'Home'
-    });
+  console.log("Query in progress...");
+  connection.query('SELECT id, title, content FROM pages where id = 1;', function (error, results, fields) {
+    console.log(results[0])
+
+    if (results.length > 0) {
+      res.render('index', {
+        title: 'Home',
+        data: results[0].content
+      });
+    }
+
+    else {
+      res.send("null");
+    }
+  });
 });
 
 router.get('/test', function (req, res, next) {
@@ -34,6 +46,32 @@ router.get('/test', function (req, res, next) {
       res.send("null");
     }
   });
+});
+
+router.post('/savepage', function(req, res) {
+  var newContent = req.body.mytextarea;
+  var pageId = req.body.pageId;
+
+  console.log(newContent);
+  console.log("Page ID: " + pageId);
+
+  var sqlQuery = 'UPDATE pages SET content = \'' + newContent + '\' WHERE id = ' + pageId + ';';
+  console.log(sqlQuery);
+
+  if (newContent && pageId) {
+      console.log("Updating page in database...");
+      connection.query(sqlQuery, function(error, results, fields) {
+        console.log(error);
+        console.log(results);
+        console.log(fields);
+        res.redirect("../test");
+      });
+  } else {
+      res.render('invalid-login', {
+          title: 'Missing username/password'
+      });
+      res.end();
+  }
 });
 
 router.get('/admin', function(req, res, next) {
